@@ -1,0 +1,922 @@
+[
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingWithBiometrics",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String",
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingBiometricAuthenticationCallback",
+      "boolean",
+      "boolean",
+      "boolean"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "access$getBiometricStorageSalt$cp",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "access$getOneSpanBioSalt$cp",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "access$getOneSpanPinSalt$cp",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "access$getPinStorageSalt$cp",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKException",
+    "method": "getErrorCode",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingBiometricAuthenticationCallback",
+    "method": "onAuthenticationFailed",
+    "args": [
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKException"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingBiometricAuthenticationCallback",
+    "method": "onAuthenticationSucceeded",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType",
+    "method": "a",
+    "args": [],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType",
+    "method": "getEntries",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType",
+    "method": "valueOf",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType",
+    "method": "values",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.f",
+    "method": "a",
+    "args": [],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.f",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.g",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.h",
+    "method": "a",
+    "args": [],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.h",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.i",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String",
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingBiometricAuthenticationCallback",
+      "boolean",
+      "boolean",
+      "boolean"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "a",
+    "args": [],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "a",
+    "args": [
+      "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.o"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "a",
+    "args": [
+      "android.content.Context"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "b",
+    "args": [
+      "android.content.Context"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "b",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.j",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding",
+    "method": "createDeviceBinding",
+    "args": [
+      "android.content.Context",
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding",
+    "method": "fingerprint",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.m",
+    "method": "a",
+    "args": [
+      "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.m",
+      "android.content.Context",
+      "java.lang.String",
+      "boolean",
+      "boolean",
+      "boolean",
+      "int",
+      "java.lang.Object"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Key Storage",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.m",
+    "method": "a",
+    "args": [
+      "java.lang.String",
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.m",
+    "method": "a",
+    "args": [
+      "android.content.Context",
+      "java.lang.String",
+      "boolean",
+      "boolean",
+      "boolean"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Key Storage",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.p",
+    "method": "a",
+    "args": [
+      "char"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.p",
+    "method": "a",
+    "args": [
+      "java.lang.String",
+      "[B",
+      "int"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.p",
+    "method": "a",
+    "args": [
+      "[B"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.obfuscated.p",
+    "method": "a",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "both",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "getContext$annotations",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "getSalt$annotations",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isAndroidIdUsed$annotations",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isHardwareUsed$annotations",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isSerialUsed$annotations",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "getContext",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "getSalt",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isAndroidIdUsed",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isHardwareUsed",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "isSerialUsed",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "useAndroidId",
+    "args": [
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "useHardware",
+    "args": [
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams",
+    "method": "useSerial",
+    "args": [
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$Companion",
+    "method": "createDeviceBinding",
+    "args": [
+      "android.content.Context",
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBinding$FingerprintType"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.devicebinding.Utils",
+    "method": "fetchAndroidIDOnlyDF",
+    "args": [
+      "android.content.Context",
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.devicebinding.Utils",
+    "method": "fetchAndroidIDSerialDF",
+    "args": [
+      "android.content.Context",
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.devicebinding.Utils",
+    "method": "fetchHardwareWithStrongBoxDF",
+    "args": [
+      "android.content.Context",
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.devicebinding.Utils",
+    "method": "fetchHardwareWithTEEDF",
+    "args": [
+      "android.content.Context",
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.devicebinding.Utils",
+    "method": "fetchSerialOnlyDF",
+    "args": [
+      "android.content.Context",
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDK",
+    "method": "getDeviceFingerprint",
+    "args": [
+      "java.lang.String",
+      "android.content.Context"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDK",
+    "method": "getFingerprint",
+    "args": [
+      "com.vasco.digipass.sdk.utils.devicebinding.DeviceBindingSDKParams"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Device Binding",
+    "discoveryScore": 95
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "decryptMessageBody",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "decryptMessageBody",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "decode",
+    "args": [
+      "java.lang.String"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "decode",
+    "args": [
+      "java.lang.String",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "decode",
+    "args": [
+      "[B"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "decode",
+    "args": [
+      "[B",
+      "int",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "decode4to3",
+    "args": [
+      "[B",
+      "int",
+      "[B",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encode3to4",
+    "args": [
+      "[B",
+      "int",
+      "int",
+      "[B",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encode3to4",
+    "args": [
+      "[B",
+      "[B",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytes",
+    "args": [
+      "[B"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytes",
+    "args": [
+      "[B",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytes",
+    "args": [
+      "[B",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytes",
+    "args": [
+      "[B",
+      "int",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytesToBytes",
+    "args": [
+      "[B"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "encodeBytesToBytes",
+    "args": [
+      "[B",
+      "int",
+      "int",
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "getAlphabet",
+    "args": [
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.Base64",
+    "method": "getDecodabet",
+    "args": [
+      "int"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.xdcrypto.symmetriccrypto.XDCryptoUtil",
+    "method": "decrypt",
+    "args": [
+      "java.lang.String",
+      "java.lang.Object"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.xdcrypto.symmetriccrypto.XDCryptoUtil",
+    "method": "encrypt",
+    "args": [
+      "java.lang.String",
+      "java.lang.Object"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.xdcrypto.symmetriccrypto.XDCryptoUtil",
+    "method": "generateKey",
+    "args": [
+      "java.lang.String",
+      "java.lang.String"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Key Storage",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.CryptoUtil",
+    "method": "decrypt",
+    "args": [
+      "java.lang.String",
+      "java.lang.Object"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.CryptoUtil",
+    "method": "encrypt",
+    "args": [
+      "java.lang.String",
+      "java.lang.Object"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Crypto",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.kony.crypto.util.CryptoUtil",
+    "method": "generateKey",
+    "args": [
+      "java.lang.String",
+      "java.lang.String"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Key Storage",
+    "discoveryScore": 90
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "generateSignature",
+    "args": [
+      "java.lang.String",
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "generateSignatureWithKey",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "generateSignature$default",
+    "args": [
+      "com.xd.digipass.api.Utils$Companion",
+      "java.lang.String",
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean",
+      "int",
+      "java.lang.Object"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "generateSignatureWithKey$default",
+    "args": [
+      "com.xd.digipass.api.Utils$Companion",
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean",
+      "int",
+      "java.lang.Object"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "generateSignature",
+    "args": [
+      "java.lang.String",
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "generateSignatureWithKey",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity",
+      "boolean"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Signing",
+    "discoveryScore": 85
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "access$getPinFileName$cp",
+    "args": [],
+    "interceptMode": "return",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 75
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "initPinStorage",
+    "args": [
+      "android.app.Activity"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 75
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "initPinStorage",
+    "args": [
+      "android.app.Activity"
+    ],
+    "interceptMode": "pre",
+    "discoveryCategory": "Authentication",
+    "discoveryScore": 75
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils",
+    "method": "multiDeviceActivateInstanceWithKey",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Other",
+    "discoveryScore": 10
+  },
+  {
+    "clazz": "com.xd.digipass.api.Utils$Companion",
+    "method": "multiDeviceActivateInstanceWithKey",
+    "args": [
+      "java.lang.String",
+      "android.app.Activity"
+    ],
+    "interceptMode": "return",
+    "discoveryCategory": "Other",
+    "discoveryScore": 10
+  }
+]
