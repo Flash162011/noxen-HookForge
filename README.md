@@ -9,7 +9,12 @@ It allows an enhanced runtime interception framework for Android applications th
 Unlike traditional network proxies, HookForge operates inside the application process using Frida, enabling interception of Java methods, Android components, authentication workflows, device binding operations, cryptographic functions, and application business logic.
 
 ---
+# Screenshots
 
+## Main Dashboard
+
+<img src="assets/screenshots/Main-Screen.png" alt="HookForge Main Screen" width="95%">
+---
 # Features
 
 ## Android Component Interception
