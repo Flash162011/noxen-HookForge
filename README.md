@@ -4,6 +4,8 @@
 
 HookForge extends the original Noxen platform with advanced runtime interception capabilities, allowing security testers and researchers to inspect, modify, and manipulate Android application behavior in real time.
 
+It allows an enhanced runtime interception framework for Android applications that enables Burp-like runtime analysis and manipulation directly at the Java method layer.
+
 Unlike traditional network proxies, HookForge operates inside the application process using Frida, enabling interception of Java methods, Android components, authentication workflows, device binding operations, cryptographic functions, and application business logic.
 
 ---
