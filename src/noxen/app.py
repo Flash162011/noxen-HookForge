@@ -148,11 +148,13 @@ def _compact_json_if_valid(value: str) -> str:
 
 
 class HomeLogo(Static):
-    # "coder mini" font — 3 rows × 29 chars
     _ART = [
         "████▄ ▄███▄ ██ ██ ▄█▀█▄ ████▄",
         "██ ██ ██ ██  ███  ██▄█▀ ██ ██",
         "██ ██ ▀███▀ ██ ██ ▀█▄▄▄ ██ ██",
+        "",
+        "   HookForge Version",
+        " Android Runtime Interception Framework built on top of Noxen"
     ]
 
     def on_mount(self) -> None:
@@ -215,7 +217,7 @@ class HomeInfo(Static):
             modified = "—"
 
         self.update(
-            f"[dim]noxen[/dim]    [#26a368]{noxen_ver}[/#26a368]\n"
+            f"[dim]HookForge[/dim]    [#26a368]{noxen_ver}[/#26a368]\n"
             f"[dim]frida[/dim]    [#26a368]{frida_ver}[/#26a368]\n"
             f"[dim]python[/dim]   [#26a368]{py_ver}[/#26a368]\n"
             f"\n"
@@ -226,7 +228,7 @@ class HomeInfo(Static):
 
 
 class NoxenApp(App):
-    TITLE = "noxen"
+    TITLE = "HookForge"
     CSS_PATH = "noxen.tcss"
     ENABLE_COMMAND_PALETTE = False
 
@@ -1145,7 +1147,7 @@ class NoxenApp(App):
         self._refresh_history_table()
         self._update_filter_count()
         self.query_one("#session_info", Label).update("Not connected")
-        self.write_log(log_info("Ready", "noxen"))
+        self.write_log(log_info("Ready", "HookForge"))
         for msg in self._startup_messages:
             self.write_log(msg)
 
