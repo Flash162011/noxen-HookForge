@@ -239,38 +239,6 @@ Benefits:
 
 ---
 
-## SSL Pinning Templates
-
-Built-in support for reusable SSL pinning bypass scripts.
-
-Examples:
-
-* Universal SSL Pinning Bypass
-* OkHttp Pinning Bypass
-* TrustManager Bypass
-* WebView SSL Validation Bypass
-* Custom Certificate Validation Hooks
-
-Templates can be loaded directly from the HookForge UI without modifying the primary Frida script.
-
----
-
-## Root Bypass Templates
-
-Built-in support for reusable root and emulator detection bypass scripts.
-
-Examples:
-
-* RootBeer Bypass
-* Magisk Detection Bypass
-* File-Based Detection Bypass
-* Package Detection Bypass
-* Emulator Detection Bypass
-
-Templates can be loaded directly from the HookForge UI without modifying the primary Frida script.
-
----
-
 ## Automatic Method Discovery
 
 Automatically scans loaded application classes and identifies security-relevant methods.
