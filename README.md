@@ -2,38 +2,39 @@
 
 > Advanced Android Runtime Interception Framework built on top of Noxen
 
-HookForge is an enhanced runtime interception framework for Android applications that enables Burp-like runtime analysis and manipulation directly at the Java method layer.
+HookForge is a runtime interception framework for Android applications that allows security testers and researchers to inspect, modify, and manipulate Java method calls while the application is running.
 
-Unlike traditional network proxies, HookForge operates inside the application runtime using Frida, allowing interception and modification of method arguments, return values, encrypted requests, decrypted responses, device binding operations, cryptographic functions, and application security controls.
+Unlike traditional network proxies, HookForge operates inside the application process using Frida, allowing interception of method arguments, return values, device binding functions, cryptographic operations, authentication logic, and business workflows.
 
 ---
 
-# Key Features
+# Features
 
 ## Runtime Request Editing
 
-Intercept and modify method arguments before the target method executes.
+Modify method arguments before the target method executes.
 
-Typical use cases:
+Examples:
 
-* Modify plaintext requests before encryption
-* Modify JWT claims before signing
-* Change HMAC inputs
-* Manipulate OTP and authentication parameters
-* Test business logic controls
+* Modify API request parameters
+* Change authentication values
+* Modify OTP requests
+* Alter device binding parameters
+* Modify plaintext data before encryption
 
 ---
 
 ## Runtime Response Editing
 
-Intercept and modify return values before they are consumed by the application.
+Modify method return values before the application consumes them.
 
-Typical use cases:
+Examples:
 
-* Modify decrypted API responses
+* Modify API responses
+* Alter authentication results
+* Change business logic decisions
+* Modify decrypted responses
 * Test client-side authorization controls
-* Alter business data at runtime
-* Bypass client-side restrictions
 
 ---
 
@@ -43,141 +44,152 @@ HookForge supports three interception modes.
 
 ### PRE Mode
 
-Intercepts execution before the original method is called.
+Intercepts before the method executes.
 
-**Available:**
+Use when you want to modify:
 
-* Arguments
-* Method metadata
-
-**Use cases:**
-
-* Encryption
-* Request signing
-* JWT generation
-* Device Binding SALT modification
+* Request parameters
+* Encryption inputs
+* Device binding values
+* Authentication requests
 
 ---
 
 ### RETURN Mode
 
-Intercepts execution after the original method completes.
+Intercepts after the method executes.
 
-**Available:**
+Use when you want to modify:
 
-* Return value
-
-**Use cases:**
-
-* Decryption
-* Response processing
-* Token validation
-* Business response manipulation
+* Response objects
+* Decrypted data
+* Validation results
+* Authentication decisions
 
 ---
 
 ### BOTH Mode
 
-Intercepts execution both before and after the method call.
+Intercepts before and after execution.
 
-**Available:**
+Use when you want to inspect:
 
-* Arguments
-* Return values
-
-**Use cases:**
-
-* Device Binding analysis
+* Device binding operations
 * Fingerprint generation
 * Key derivation functions
-* Alias generation
+* Security-sensitive workflows
 
 ---
 
 ## Automatic JSON Formatting
 
-Automatically detects JSON payloads and formats them for readability.
+Automatically formats JSON payloads inside the Intercept and History views.
 
 Benefits:
 
-* Easier payload review
+* Easier reading
+* Faster analysis
 * Cleaner editing experience
-* Reduced manual formatting
 
 ---
 
 ## Syntax Highlighting
 
-Provides syntax highlighting for:
+Provides syntax highlighting for structured data.
+
+Supported formats:
 
 * JSON
 * XML
 * JWT
 * HTTP Payloads
 
-Benefits:
-
-* Improved readability
-* Faster identification of parameters
-* Better payload analysis
-
 ---
 
 ## HTTP Flow Reconstruction
 
-Reconstructs application-layer HTTP communication from runtime method interceptions.
+Reconstructs request and response flows from intercepted runtime methods.
 
-Benefits:
+This is useful when applications use:
 
-* Visualize request/response pairs
-* Analyze encrypted applications
-* Understand API workflows without network visibility
+* Custom encryption
+* Proprietary protocols
+* Certificate pinning
+* SDK-based communication
+
+Example:
+
+```text
+Application
+    ↓
+Request Builder
+    ↓
+Encryption
+    ↓
+Network Layer
+    ↓
+Response
+    ↓
+Decryption
+    ↓
+Business Logic
+```
+
+HookForge can reconstruct the complete flow even when the network traffic itself is encrypted.
 
 ---
 
 ## SSL Pinning Templates
 
-Built-in Frida templates for bypassing common SSL pinning implementations.
+Built-in template support for common SSL pinning bypass scripts.
 
-Supported categories include:
+Templates can be placed in:
 
-* OkHttp
-* TrustManager
-* WebView SSL Validation
-* Certificate Pinning
-* Custom SSL Validators
+```text
+templates/
+└── ssl_pinning/
+```
 
-Benefits:
+Examples:
 
-* Faster assessment setup
-* Reduced scripting effort
+```text
+templates/ssl_pinning/okhttp.js
+templates/ssl_pinning/trustmanager.js
+templates/ssl_pinning/universal_ssl_bypass.js
+```
+
+Templates can be loaded directly from the HookForge UI without manually copying Frida scripts.
 
 ---
 
 ## Root Bypass Templates
 
-Built-in templates for bypassing root and device integrity checks.
+Built-in template support for root and emulator detection bypasses.
 
-Supported categories include:
+Templates can be placed in:
 
-* RootBeer
-* Magisk Detection
-* File-Based Detection
-* Package Detection
-* Emulator Detection
+```text
+templates/
+└── root_bypass/
+```
 
-Benefits:
+Examples:
 
-* Rapid security assessment setup
-* Reusable bypass library
+```text
+templates/root_bypass/rootbeer.js
+templates/root_bypass/magisk.js
+templates/root_bypass/emulator_detection.js
+```
+
+Templates are available directly from the UI and can be injected without modifying the primary Frida script.
 
 ---
 
 ## Automatic Method Discovery
 
-Automatically scans loaded classes and identifies security-relevant methods.
+Automatically scans loaded classes and identifies potentially interesting methods.
 
-Discovery categories include:
+Categories include:
 
 * Cryptography
 * Device Binding
@@ -185,60 +197,57 @@ Discovery categories include:
 * Storage
 * Networking
 * Root Detection
-* Biometric Operations
 
 Benefits:
 
-* Reduces reverse engineering effort
-* Accelerates hook generation
-* Simplifies assessment workflows
+* Reduces manual reverse engineering
+* Accelerates hook creation
+* Helps identify security-relevant methods
 
 ---
 
 # Runtime Interception Workflow
 
-## Request Flow
+HookForge is not limited to encryption and decryption functions.
+
+Any Java method can be intercepted.
+
+Example 1:
 
 ```text
-Plaintext Request
-        ↓
-HookForge PRE Interception
-        ↓
-Modify Arguments
-        ↓
-encrypt()
-        ↓
-Encrypted Request
+login(username, password)
+
+PRE
+↓
+Modify username/password
+↓
+Original method executes
 ```
 
-## Response Flow
+Example 2:
 
 ```text
-Encrypted Response
-        ↓
-decrypt()
-        ↓
-HookForge RETURN Interception
-        ↓
-Modify Return Value
-        ↓
-Application Consumes Response
+isRooted()
+
+RETURN
+↓
+Modify return value
+↓
+Return false
 ```
 
----
-
-# Architecture
+Example 3:
 
 ```text
-Android Application
-        ↓
-Frida Agent
-        ↓
-HookForge Runtime Engine
-        ↓
-Interception Framework
-        ↓
-UI / History / Flow Reconstruction
+getDeviceFingerprint(salt)
+
+BOTH
+↓
+Inspect/modify input
+↓
+Method executes
+↓
+Inspect/modify output
 ```
 
 ---
@@ -246,8 +255,6 @@ UI / History / Flow Reconstruction
 # Prerequisites
 
 ## Python
-
-Required:
 
 ```text
 Python 3.10+
@@ -279,10 +286,17 @@ node -v
 
 ## Frida
 
+Recommended:
+
+```text
+Frida 16.6.6
+```
+
 Install:
 
 ```bash
-pip install frida-tools
+pip install frida-tools==13.6.1
+pip install frida==16.6.6
 ```
 
 Verify:
@@ -293,22 +307,18 @@ frida --version
 
 ---
 
-## Android Device
-
-Requirements:
+## Android Requirements
 
 * Android Device or Emulator
 * USB Debugging Enabled
-* Frida Server (if required)
 * ADB Installed
+* Frida Server (when required)
 
 ---
 
 # Installation
 
 ## Install NVM
-
-Windows:
 
 ```powershell
 winget install CoreyButler.NVMforWindows
@@ -323,23 +333,9 @@ nvm install 22
 nvm use 22
 ```
 
-Verify:
-
-```powershell
-node -v
-```
-
 ---
 
-## Install Python Dependencies
-
-```powershell
-pip install -r requirements.txt
-```
-
----
-
-## Install Node Dependencies
+## Install Dependencies
 
 ```powershell
 npm install
@@ -363,23 +359,19 @@ python -m noxen
 
 ---
 
-# Supported Analysis Scenarios
+# Common Use Cases
 
-* Mobile Banking Applications
-* FinTech Applications
-* OneSpan DigiPass Analysis
-* Device Binding Analysis
+* Mobile Banking Assessments
 * Runtime API Manipulation
+* SSL Pinning Analysis
+* Root Detection Bypass
+* OneSpan Device Binding Analysis
 * Authentication Testing
 * Business Logic Testing
-* SSL Pinning Bypass
-* Root Detection Bypass
-* Mobile Application Security Assessments
+* Mobile Application Security Research
 
 ---
 
 # Disclaimer
 
 HookForge is intended for authorized security testing, research, and educational purposes only.
-
-Users are responsible for ensuring compliance with applicable laws, regulations, and authorization requirements before using this software.
