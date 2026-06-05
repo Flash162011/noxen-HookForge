@@ -199,67 +199,81 @@ HookForge can reconstruct and display the flow even when network traffic cannot 
 
 ---
 
-## SSL Pinning Templates
+## Template System
 
-Built-in support for reusable SSL pinning bypass templates.
+HookForge supports reusable Frida templates that can be loaded directly from the UI.
 
-Templates can be stored under:
+Supported categories:
+
+* SSL Pinning
+* Root Detection
+* Emulator Detection
+* Device Binding
+* Custom Scripts
+
+Template directory structure:
 
 ```text
 templates/
-└── ssl_pinning/
+├── ssl_pinning/
+├── root_bypass/
+├── device_binding/
+└── custom/
 ```
 
-Example templates:
+Examples:
 
 ```text
-templates/ssl_pinning/okhttp.js
-templates/ssl_pinning/trustmanager.js
 templates/ssl_pinning/universal_ssl_bypass.js
+templates/root_bypass/rootbeer.js
+templates/device_binding/onespan_hooks.js
+templates/custom/custom_script.js
 ```
-
-Templates can be loaded directly from the HookForge UI.
 
 Benefits:
 
 * Faster assessment setup
 * Reusable Frida scripts
 * Reduced manual scripting effort
+* Consistent testing workflows
+
+---
+
+## SSL Pinning Templates
+
+Built-in support for reusable SSL pinning bypass scripts.
+
+Examples:
+
+* Universal SSL Pinning Bypass
+* OkHttp Pinning Bypass
+* TrustManager Bypass
+* WebView SSL Validation Bypass
+* Custom Certificate Validation Hooks
+
+Templates can be loaded directly from the HookForge UI without modifying the primary Frida script.
 
 ---
 
 ## Root Bypass Templates
 
-Built-in support for reusable root and emulator detection bypass templates.
+Built-in support for reusable root and emulator detection bypass scripts.
 
-Templates can be stored under:
+Examples:
 
-```text
-templates/
-└── root_bypass/
-```
+* RootBeer Bypass
+* Magisk Detection Bypass
+* File-Based Detection Bypass
+* Package Detection Bypass
+* Emulator Detection Bypass
 
-Example templates:
-
-```text
-templates/root_bypass/rootbeer.js
-templates/root_bypass/magisk.js
-templates/root_bypass/emulator_detection.js
-```
-
-Templates can be loaded directly from the HookForge UI.
-
-Benefits:
-
-* Rapid testing setup
-* Reusable bypass library
-* Faster assessment workflows
+Templates can be loaded directly from the HookForge UI without modifying the primary Frida script.
 
 ---
 
 ## Automatic Method Discovery
 
-Automatically scans loaded classes and identifies security-relevant methods.
+Automatically scans loaded application classes and identifies security-relevant methods.
 
 Discovery categories:
 
@@ -273,7 +287,7 @@ Discovery categories:
 
 ### Automatic Hook Generation
 
-Discovered methods can be automatically exported into HookForge-compatible hook definitions.
+Discovered methods can be automatically exported into HookForge-compatible `hooks.json` definitions.
 
 Generated output example:
 
@@ -289,6 +303,17 @@ Generated output example:
 }
 ```
 
+HookForge automatically suggests the most appropriate interception mode.
+
+| Method Type               | Suggested Mode |
+| ------------------------- | -------------- |
+| Encryption                | PRE            |
+| Request Signing           | PRE            |
+| Device Binding            | BOTH           |
+| Decryption                | RETURN         |
+| Response Parsing          | RETURN         |
+| Authentication Validation | RETURN         |
+
 Benefits:
 
 * Reduces reverse engineering effort
@@ -296,26 +321,6 @@ Benefits:
 * Accelerates hook creation
 * Simplifies onboarding for new applications
 * Helps identify hidden security-sensitive methods
-
----
-
-## APK Analysis
-
-HookForge supports APK analysis to assist in identifying Android attack surfaces.
-
-Capabilities include:
-
-* Component discovery
-* Exported component identification
-* Intent analysis
-* Entry-point discovery
-* Hook generation preparation
-
-Benefits:
-
-* Faster application onboarding
-* Improved visibility of attack surfaces
-* Simplified hook configuration generation
 
 ---
 
@@ -390,7 +395,23 @@ Inspect or modify output
 
 ---
 
-### Example 4 - Encrypted Application
+### Example 4 - Business Logic
+
+```text
+isTransactionAllowed(amount)
+
+RETURN
+↓
+Inspect result
+↓
+Modify decision
+↓
+Application receives modified value
+```
+
+---
+
+### Example 5 - Encrypted Application
 
 ```text
 Request Builder
@@ -446,18 +467,19 @@ node -v
 
 ## Frida
 
+HookForge is compatible with modern Frida releases.
+
 Recommended:
 
 ```text
-Frida 16.6.6
-Frida Tools 13.6.1
+Frida 17+
 ```
 
 Install:
 
 ```bash
-pip install frida==16.6.6
-pip install frida-tools==13.6.1
+pip install frida
+pip install frida-tools
 ```
 
 Verify:
