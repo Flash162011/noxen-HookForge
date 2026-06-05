@@ -11,9 +11,8 @@ Unlike traditional network proxies, HookForge operates inside the application pr
 ---
 # Screenshots
 
-## Main Dashboard
-
 <img src="assets/screenshots/Main-Screen.png" alt="HookForge Main Screen" width="95%">
+
 ---
 # Features
 
